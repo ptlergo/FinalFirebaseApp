@@ -1,5 +1,5 @@
 {
-  "name": "patdesigns2016",
+  "name": "firebaseapp",
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.4.0",
@@ -15,7 +15,7 @@
     "angular-mocks": "1.4.0"
   },
   "appPath": "app",
-  "moduleName": "patdesigns2016App",
+  "moduleName": "firebaseapp",
   "overrides": {
     "bootstrap": {
       "main": [

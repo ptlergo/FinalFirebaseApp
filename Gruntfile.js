@@ -9,6 +9,9 @@
 
 module.exports = function (grunt) {
 
+
+
+
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
@@ -37,6 +40,12 @@ module.exports = function (grunt) {
         files: ['bower.json'],
         tasks: ['wiredep']
       },
+      sass: {
+             files: 'app/css/*.scss',
+             tasks: ['sass']
+           },
+
+
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
         tasks: ['newer:jshint:all', 'newer:jscs:all'],
@@ -66,6 +75,21 @@ module.exports = function (grunt) {
         ]
       }
     },
+
+    // Compile Sass
+        sass: {
+          options: {
+            // sourceMap: true,
+            sourceComments: false
+          },
+          dist: {
+            files: {
+              'app/css/style.css': 'app/css/style.scss',
+              'app/css/main.css': 'app/css/main.scss'
+            }
+          }
+        },
+
 
     // The actual grunt server settings
     connect: {
@@ -471,6 +495,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'postcss:server',
       'connect:livereload',
+      'sass',
       'watch'
     ]);
   });

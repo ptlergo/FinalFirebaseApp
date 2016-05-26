@@ -5,7 +5,7 @@
 
     <div class="textintro">
       <h1>Check-in</h1>
-      <p>Fill out this form to check-in or go
+      <p>Fill form to check-in or go
       <a ng-href="#/meetings">back to meetings</a></p>
 
       <p class="error formerror" ng-show="message">{{ message }}</p>
@@ -28,7 +28,7 @@
       ng-model="user.email" ng-required="true">
       <p class="error validationerror"
       ng-show="myform.email.$invalid && myform.email.$touched">
-      Must be a valid email</p>
+      email invalid</p>
 
     </fieldset>
 
